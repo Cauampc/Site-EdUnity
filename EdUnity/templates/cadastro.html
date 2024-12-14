@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - EdUnity</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cadastro.css' %}">
+</head>
+<body>
+    <header>
+        <h1>EdUnity</h1>
+        <p>Transformando a Educação com Soluções Inovadoras</p>
+    </header>
+
+    <div class="container">
+        <h2>Cadastre-se</h2>
+        <form action="/cadastro" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="first_name">Nome</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Sobrenome</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirmar Senha</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>               
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EdUnity. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdUnity - Transformando a Educação</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>EdUnity</h1>
+        <p>Transformando a Educação com Soluções Inovadoras</p>
+    </header>
+
+    <nav>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#propostas">Propostas</a>
+        <a href="#ajuda">Ajuda</a>
+        <a href="#contato">Contato</a>
+        <!-- Botões de Cadastro e Login -->
+        <a href="{% url 'cadastro' %}">Cadastre-se</a>
+        <a href="{% url 'login' %}">Login</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Bem-vindo ao EdUnity</h1>
+        <p>Capacitando educadores e instituições com ferramentas de ensino avançadas.</p>
+    </section>
+
+    <div class="container" id="objetivos">
+        <h2>Nossos Objetivos</h2>
+        <div class="objectives">
+            <div class="objective">
+                <h3>Melhoria da Qualidade de Ensino</h3>
+                <p>Proporcionar ferramentas que auxiliem na criação de aulas mais dinâmicas e eficazes.</p>
+            </div>
+            <div class="objective">
+                <h3>Suporte Contínuo</h3>
+                <p>Oferecer suporte constante para que professores possam aproveitar ao máximo as nossas soluções.</p>
+            </div>
+            <div class="objective">
+                <h3>Inovação Educacional</h3>
+                <p>Trazer o que há de mais novo em tecnologia para o ambiente educacional.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="propostas">
+        <h2>Nossas Propostas</h2>
+        <p>O EdUnity oferece uma plataforma integrada que facilita a gestão escolar, o desenvolvimento de planos de aula, e a comunicação entre alunos, pais e professores. Nosso serviço é ideal para instituições que buscam modernizar suas práticas educacionais, permitindo uma experiência de ensino mais engajadora e eficiente.</p>
+        <p>Com o EdUnity, professores têm à disposição uma série de recursos para enriquecer o aprendizado dos alunos, como conteúdo multimídia, ferramentas de avaliação automatizadas e suporte pedagógico especializado.</p>
+    </div>
+
+    <div class="contact-help" id="ajuda">
+        <h3>Ajuda</h3>
+        <div class="chat-box">
+            <p>Oi! Eu sou o Uni, seu assistente virtual. Estou aqui para ajudar com suas dúvidas.</p>
+            <p>Posso responder a perguntas frequentes ou, se preferir, encaminhar você para um atendimento personalizado.</p>
+            <p>Se eu não conseguir responder sua pergunta, vou te direcionar para a nossa equipe de suporte para que você possa falar com uma pessoa real.</p>
+        </div>
+    </div>
+
+    <div class="contact" id="contato">
+        <h3>Contato</h3>
+        <div class="contact-box">
+            <p>Precisa de ajuda adicional ou deseja falar diretamente com nossa equipe? Estamos aqui para ajudar!</p>
+            <a href="mailto:contato@edunity.com.br" class="contact-button">Envie-nos um e-mail</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EdUnity. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

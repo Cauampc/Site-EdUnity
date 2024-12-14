@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - EdUnity</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pagamento2.css' %}">
+</head>
+<body>
+    <header>
+        <h1>EdUnity</h1>
+        <p>Complete sua compra e inicie sua jornada educacional!</p>
+    </header>
+    <div class="plan-title">
+        <h2>PLANO INTERMEDIÁRIO</h2>
+    </div>
+
+    <div class="container">
+        <h2>Pagamento</h2>
+        <form action="/processar-pagamento" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="cartao">Número do cartão:</label>
+                <input type="text" id="cartao" name="cartao" maxlength="16" required>
+            </div>
+            <div class="form-group">
+                <label for="validade">Data de validade (MM/AA):</label>
+                <input type="text" id="validade" name="validade" maxlength="5" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="password" id="cvv" name="cvv" maxlength="3" required>
+            </div>
+            <button type="submit">Finalizar Pagamento</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EdUnity. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

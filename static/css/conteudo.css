@@ -1,0 +1,111 @@
+/* Garantir que o rodapé fique na parte inferior da tela */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    min-height: calc(100vh - 100px); /* Ajustar altura para ocupar a tela inteira menos o espaço do header e footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.planos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.plano {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+}
+
+.plano h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.plano .preco {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.plano ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.plano ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.plano ul li:last-child {
+    border-bottom: none;
+}
+
+.btn-plano {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-plano:hover {
+    background-color: #45a049;
+}
+
+.destaque {
+    border: 2px solid #FFD700;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .planos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plano {
+        width: 90%;
+    }
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
